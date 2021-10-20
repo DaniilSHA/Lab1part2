@@ -16,7 +16,6 @@ public class main {
                 new InfoBook("C/C++. Процедурное программирование", "Полубенцева М.И.", 2017, pubList[2]),
                 new InfoBook("Конституция РФ",2020, pubList[0])
 
-
         };
 
         InfoBook.printAll(bookList);
