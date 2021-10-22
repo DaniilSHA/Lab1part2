@@ -1,8 +1,8 @@
 public class InfoBook {
-    String name;
-    InfoPublishingHouse publish;
-    int year;
-    String authors[];
+    private String name;
+    private InfoPublishingHouse publish;
+    private int year;
+    private String authors[];
 
     InfoBook (String name, int year, InfoPublishingHouse publish) {
         setName(name);
@@ -25,53 +25,53 @@ public class InfoBook {
         setPublish(publish);
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    InfoPublishingHouse getPubInfo() {
+    public InfoPublishingHouse getPubInfo() {
         return publish;
     }
 
-    int getYear() {
+    public int getYear() {
         return year;
     }
 
-    String[] getAuthors() {
+    public String[] getAuthors() {
         return authors;
     }
 
-    int getNumOfAuthors () {
+    public int getNumOfAuthors () {
         return authors.length;
     }
 
-    String getAuthor (int i) {
+    public String getAuthor (int i) {
         if ((i < 0) & (i > authors.length)) throw new IllegalArgumentException ("автора с таким индексом не существует");
         return authors[i];
     }
 
-    void setName(String name) {
+    public void setName(String name) {
         if (name == "") throw new IllegalArgumentException ("название не должно быть пустой ссылкой");
         else this.name = name;
     }
 
-    void setPublish (InfoPublishingHouse publish) {
+    public void setPublish (InfoPublishingHouse publish) {
         this.publish = publish;
     }
 
-    void setYear(int year) {
+    public void setYear(int year) {
         if (year < 0) throw new IllegalArgumentException ("год должен быть сторого больше нуля");
         this.year = year;
     }
 
-    void setAuthors (String authors[]) {
+    public void setAuthors (String authors[]) {
         for (int i=0; i < authors.length; i++) {
             if (authors[i] == "") throw new IllegalArgumentException ("название не должно быть пустой ссылкой");
         }
         this.authors = authors;
     }
 
-    void printAuthors () {
+    public void printAuthors () {
         if (authors.length < 0) throw new IllegalArgumentException ("авторов нету");
         else for (int i=0; i < authors.length; i++) {
             System.out.print(authors[i]);
@@ -81,7 +81,7 @@ public class InfoBook {
         }
     }
 
-    void print () {
+    public void print () {
         if (authors == null) {
             System.out.println("name = " + name + "; Publishing House = " + publish.name + "; Year = " + year);
         }
