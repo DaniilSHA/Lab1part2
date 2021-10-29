@@ -82,7 +82,7 @@ public class InfoBook {
             if (authors.length == 1) System.out.print("; author = ");
             else System.out.print("; authors = ");
             printAuthors();
-            System.out.println("; Publishing House = " + publish.getName() + "; Publishing City = " + publish.getName() + "; Year = " + year + ".");
+            System.out.println("; Publishing House = " + publish.getName() + "; Publishing City = " + publish.getCity() + "; Year = " + year + ".");
         }
     }
 
